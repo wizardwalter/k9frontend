@@ -1,0 +1,126 @@
+#container-top {
+  margin-top: 5vh;
+}
+
+.card {
+  margin: 5px 0px 2px 1vw;
+  padding: none;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D3D3D3 97.18%);
+  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+  border-radius: 35px;
+  overflow: hidden;
+  position: static;
+
+
+}
+.not-card-body {
+  padding: 15px;
+}
+
+.card-top {
+  padding-top: 15px;
+}
+
+.card-span{
+width: 212px;
+height: 40px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 34px;
+text-align: center;
+color: #FFFFFF;
+text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.card-button {
+  width: 212px;
+height: fit-content;
+  background: linear-gradient(157.12deg, #3b7ab5 14.84%, #275497 86.24%);
+  border: 6px solid #2c4b79;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 14px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+#map {
+  margin: 100px;
+  width: 23.48rem;
+  height: 35vh;
+  box-shadow: 0px 4px 34px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  align-self: center;
+}
+.lds-facebook div:nth-child(1) {
+  left: 55rem;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 56.5rem;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 58rem;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+#caption {
+  overflow: hidden;
+  width: 24rem;
+  height: 26vh;
+  margin-top: 15vh;
+  background: linear-gradient(180deg, #ffffff 0%, #d3d3d3 97.18%);
+  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+  border-radius: 35px;
+}
+
+#donation_header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 39px;
+  text-align: center;
+  color: #333333;
+  border-bottom: 3px solid #d6d3d394;
+  border-radius: 3px;
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+}
+#donation_text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+}

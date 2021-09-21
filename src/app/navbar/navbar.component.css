@@ -1,0 +1,188 @@
+img {
+  width: 200px;
+  height: 200px;
+  border: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+
+#logo {
+  z-index: 2;
+}
+
+#contact {
+  width: 300px;
+  height: 115px;
+  background: linear-gradient(157.12deg, #5b8edb 14.84%, #2e55a2 86.24%);
+  border: 5px solid #1f447a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 14px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  margin-top: 25px;
+  z-index: 2;
+}
+#contact_button {
+  text-shadow: 1px 1px #5488d7, -1px -1px 0 #5488d7, 1px -1px 0 #5488d7,
+    -1px 1px 0 #5488d7;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.nav_buttons {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 78px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.inner_buttons {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  border: 2.7px solid;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
+  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+  border-radius: 100px;
+}
+
+#graduates_button {
+  width: 183.96px;
+  height: 51px;
+  z-index: 3;
+  margin-top: 25px;
+}
+
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#logout {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(242, 242, 242, 0.75) 100%
+  );
+  border: 2.5 px solid #969696;
+  border-radius: 30px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #373737;
+  position: absolute;
+  width: 107px;
+  height: 32px;
+}
+
+#news_button {
+  width: 183.96px;
+  height: 51px;
+  z-index: 3;
+  margin-top: 25px;
+
+}
+
+#donate_button {
+  text-shadow: 1px 1px #d75454, -1px -1px 0 #d75454, 1px -1px 0 #d75454,
+    -1px 1px 0 #d75454;
+  margin-top: 13px;
+  text-align: center;
+}
+
+#donate {
+  width: 300px;
+  height: 115px;
+  background: linear-gradient(157.12deg, #992b2b 14.84%, #671818 86.24%);
+  border: 5px solid #501919;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 14px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  margin-top: 25px;
+  z-index: 2;
+}
+
+#navbar {
+  height: 22vh;
+  width: 100%;
+  background: linear-gradient(180deg, #222222 0%, #363636 100%);
+  box-shadow: 0px 4px 60px 6px rgba(0, 0, 0, 0.25);
+}
+
+#hamburger {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+#hamburger_icon:hover {
+  cursor: pointer;
+}
+
+#hamburger_icon {
+  margin-top: 22px;
+  color: white;
+}
+
+ul {
+  /* No bullets in list */
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.user {
+  position: relative;
+  display: inline-block;
+}
+.user-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.user-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.user-content a:hover {
+  background-color: #f1f1f1;
+}
+.show {
+  display: block;
+  height: auto;
+  width: 30px;
+  align-self: center;
+  padding: 0;
+  z-index: 3;
+}

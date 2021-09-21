@@ -1,0 +1,248 @@
+.wrapper {
+  height: 100%;
+
+}
+
+#slideshow{
+  width: 100vw;
+  margin-bottom: 5vh;
+}
+
+h2 {
+  text-align: center;
+}
+
+carousel img {
+  height: 55vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+a {
+  color: white;
+}
+
+.card {
+  width: 20vw;
+  height: auto;
+}
+.card-img-top {
+  height: 30vh;
+  width: auto;
+}
+
+.card-title {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+#blogs-header {
+  text-decoration: underline;
+}
+i {
+  display: block;
+  z-index: 5;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  align-self: center;
+}
+.lds-facebook div:nth-child(1) {
+  left: 55rem;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 56.5rem;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 58rem;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+#aboutus {
+  width: 100vw;
+  height: 80.25vh;
+  background: linear-gradient(180deg, #3b7ab5 0%, rgba(46, 85, 161, 0.4) 100%);
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 51px;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+#aboutusheader {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4vw;
+  line-height: 1.1em;
+  text-align: right;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 1.25vh;
+}
+
+#aboutusimg {
+  width: 90%;
+  height: 45vh;
+  border-radius: 5px;
+  margin-bottom: .5em;
+}
+
+#aboutusrow{
+  width: 100%;
+  height: 35vh;
+}
+
+#aboutustext {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: .75em;
+  line-height: 1.25em;
+  text-align: center;
+  color: #ffffff;
+}
+
+#ourteam {
+  width: 100vw;
+  height: 55vh;
+  background: linear-gradient(180deg, #992b2b 0%, #b53b3b 0%, #671818 100%);
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 51px;
+  margin-bottom: 30px;
+}
+
+#ourteamheader {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4vw;
+  line-height: 1.1em;
+  text-align: right;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 1.25vh;
+}
+
+.ourteampics {
+  margin-top: 3vh;
+  width: 95px;
+  height: 95px;
+  border-radius: 100em;
+  border: 2px solid black;
+}
+
+.ourteamnames {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 4vh;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.ourteamjobs{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 4vh;
+color: #ffffff;
+text-align: center;
+margin-top: 10px;
+}
+
+.card {
+  background: inherit;
+  border: none;
+}
+
+.ourteamsubheader {
+  color: #ffffff;
+}
+
+#blogs {
+  margin-top: 5vh;
+  width: 100vw;
+  height: max-content;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0.75) 0%,
+    #ffffff 0%,
+    rgba(245, 245, 245, 0.75) 100%
+  );
+  box-shadow: 0px 4px 34px 1px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 30px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 51px;
+}
+#view-all {
+  background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
+  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+  border-radius: 100px;
+  width: 12vw;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#view-all-text {
+  width: 11vw;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.75vw;
+  text-align: center;
+  color: #ffffff;
+}
+#viewallatag{
+  text-align: center;
+  height: fit-content;
+  margin-bottom: 5px;
+}
+#latest-news {
+  width: 472px;
+  height: 60px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4vw;
+  line-height: 88px;
+  text-align: right;
+  color: #222222;
+  text-decoration: underline;
+}
+
+#view-all-top {
+  margin: 5px 0px 35px 0px;
+
+}
+
+

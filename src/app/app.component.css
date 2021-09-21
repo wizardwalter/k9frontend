@@ -1,0 +1,16 @@
+/* .wrapper{
+    height: fill;
+    width: fill;
+    background: rgb(8,28,238);
+background: radial-gradient(circle, rgba(8,28,238,1) 0%, rgba(0,163,255,1) 50%, rgba(23,226,246,1) 100%);
+} */
+
+.wrapper {
+  background: #2d2d2d;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

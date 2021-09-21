@@ -1,0 +1,24 @@
+
+<div id="whole-container" class="container">
+  <div class="row justify-content-center">
+    <div class="card">
+      <div class="row justify-content-center">
+        <cl-image public-id="{{dog.image}}">
+          <cl-transformation gravity="face" height="350" width="330" crop="fill"></cl-transformation></cl-image>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <h5 class="card-title">{{dog.name}}</h5>
+        </div>
+          <div class="row justify-content-center">
+            <p class="card-text">{{dog.about}}</p>
+          </div>
+      </div>
+      <button *ngIf="isLogin" class="btn btn-lg btn-warning" [routerLink]="['/dog/edit/', dog._id]"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button *ngIf="isLogin" class="btn btn-lg btn-danger"><i class="fa fa-trash" aria-hidden="true" (click)='deleteDog(dog._id)'></i></button>
+    </div>
+    <div class="map" id="map" class="match-parent"></div>
+  </div>
+
+</div>
+

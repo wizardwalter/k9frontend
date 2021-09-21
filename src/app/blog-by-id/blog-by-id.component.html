@@ -1,0 +1,120 @@
+
+<!-- <div class="container">
+  <div class="row d-flex justify-content-center">
+    <div id="theform" class="col-sm-5">
+      <div class="row d-flex justify-content-center">
+        <form class="form" #form="ngForm" (submit)="onSubmit(form)">
+          <div id="header" class="col-sm-12">
+            <div class="row d-flex justify-content-center">
+              <h2>Edit Blog</h2>
+            </div>
+          </div>
+          <input  type="file" class="inputfile" name="photo" ngModel
+          (input)="onChange(f.files[0])" #f #test>
+          <div class="row d-flex justify-content-around">
+            <div class="col-sm-2 input-fields">
+              <label for="title">Title: </label>
+            </div>
+            <div class="col-sm-10 input-fields">
+              <input
+                type="text"
+                [(ngModel)]="blog.title"
+                name="title"
+                ngModel
+                form.title="ngModel"
+              />
+            </div>
+          </div>
+          <div class="row d-flex justify-content-around">
+            <div class="col-sm-2 input-fields">
+              <label for="text">Text: </label>
+            </div>
+            <div class="col-sm-10 input-fields">
+              <input
+                type="text"
+                [(ngModel)]="blog.text"
+                name="text"
+                ngModel
+                form.text="ngModel"
+              />
+            </div>
+          </div>
+          <div class="row d-flex justify-content-around">
+            <div class="col-sm-2 input-fields">
+              <label for="text">Author: </label>
+            </div>
+            <div class="col-sm-10 input-fields">
+              <input
+                type="text"
+                [(ngModel)]="blog.author"
+                name="author"
+                ngModel
+                form.author="ngModel"
+              />
+            </div>
+          </div>
+          <button type="submit" class="submit">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <form class="form" #form="ngForm" (submit)="onSubmit(form)">
+        <div class="title">Edit Blog</div>
+        <input
+          type="file"
+          class="inputfile"
+          name="photo"
+          ngModel
+          (input)="onChange(f.files[0])"
+          #f
+          #test
+        />
+        <div class="input-container ic1">
+          <input
+            id="firstname"
+            class="input"
+            type="text"
+            [(ngModel)]="blog.title"
+            name="title"
+            ngModel
+            form.title="ngModel"
+          />
+          <div class="cut cut-short"></div>
+          <label for="firstname" class="placeholder">Title</label>
+        </div>
+        <div class="input-container ic2">
+          <input
+            id="lastname"
+            class="input"
+            type="text"
+                [(ngModel)]="blog.text"
+                name="text"
+                ngModel
+                form.text="ngModel"
+          />
+          <div class="cut cut-short"></div>
+          <label for="lastname" class="placeholder">Text</label>
+        </div>
+        <div class="input-container ic2">
+          <input
+            id="email"
+            class="input"
+            type="text"
+                [(ngModel)]="blog.author"
+                name="author"
+                ngModel
+                form.author="ngModel"
+          />
+          <div class="cut"></div>
+          <label for="email" class="placeholder">Author</label>
+        </div>
+        <button type="submit" class="submit">submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-around">
+      <div class="col-sm-6 d-flex justify-content-center">
+        <div>
+          <div class="map" id="map" class="match-parent"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 d-flex justify-content-center">
+        <div id="caption">
+          <div
+            id="donation_header_row"
+            class="row d-flex justify-content-center"
+          >
+            <span id="donation_header">Our Donations</span>
+          </div>
+
+          <div id="donation_paragraph_row" class="row d-flex justify-content-center">
+            <span id="donation_text" class="col-sm-11">
+              View to see where all of our donated graduates relocated!
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="container-top" class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div *ngFor="let d of dogs" class="card col-sm-2">
+          <div class=" row d-flex justify-content-center">
+            <cl-image class="card-top" public-id="{{ d.image }}">
+              <cl-transformation gravity="face" height="250" width="275" crop="fill" radius="25" border="2px_solid_rgb:282828">
+              </cl-transformation>
+            </cl-image>
+          </div>
+          <div class="not-card-body row d-flex justify-content-center">
+              <button class="card-button" [routerLink]="[d._id]">
+                <span class="card-span">{{ d.name }}</span>
+              </button>
+          </div>
+      </div>
+    </div>
+  <button
+    *ngIf="isLogin"
+    class="btn btn-md btn-success"
+    routerLink="/dog/create"
+  >
+    Create Dog
+  </button>
+</div>
