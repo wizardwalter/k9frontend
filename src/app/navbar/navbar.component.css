@@ -90,7 +90,7 @@ a{
   color: #373737;
   position: absolute;
   width: 107px;
-  height: 32px;
+  height: fit-content;
 }
 
 #news_button {

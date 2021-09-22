@@ -11,16 +11,16 @@
         </a>
         <ul id="UserContent" class="user-content">
           <li>
-            <a href="/blogs">News</a>
+            <a routerLink="/blogs">News</a>
           </li>
           <li>
-            <a href="/dogs">Graduates</a>
+            <a routerLink="/dogs">Graduates</a>
           </li>
           <li>
-            <a href="/contact">Contact Us</a>
+            <a routerLink="/contact">Contact Us</a>
           </li>
           <li>
-            <a href="/donate">Donate</a>
+            <a routerLink="/donate">Donate</a>
           </li>
         </ul>
       </li>
@@ -29,8 +29,8 @@
     <div id="donate" class="col-2 align-items-around justify-content-center d-none d-xl-block">
       <div class="row d-flex justify-content-center">
 
-          <button href="/donate" id="donate_button" class="nav_buttons">
-            <a href="/donate">DONATE</a>
+          <button routerLink="/donate" id="donate_button" class="nav_buttons">
+            <a routerLink="/donate">DONATE</a>
           </button>
         <button id="graduates_button" class="inner_buttons"><a href="/dogs">GRADUATES</a></button>
 
@@ -50,6 +50,7 @@
     </div>
     <div class="col-3 col-xl-1">
       <button *ngIf="islogin" (click)="logout()" id="logout" class="btn btn-sm">Logout</button>
+      <button *ngIf="!islogin" routerLink='/admin' id="logout" class="btn btn-sm">Own this site?</button>
     </div>
   </div>
 </div>
