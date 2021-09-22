@@ -15,8 +15,11 @@ import { DogServiceService } from '../shared/dog-service.service';
 export class CreateDogComponent implements OnInit {
   constructor(public dogService: DogServiceService, public router: Router) {}
 
-  ngOnInit(): void {
-    var map = new mapboxgl.Map({
+isLoading : boolean = true;
+map: mapboxgl.Map;
+
+   ngOnInit() {
+    this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
@@ -24,16 +27,14 @@ export class CreateDogComponent implements OnInit {
       zoom: 2,
     });
     const geocoder = new MapboxGeocoder({
-      // Initialize the geocoder
-      accessToken: environment.mapbox.accessToken , // Set the access token
-      mapboxgl: mapboxgl, // Set the mapbox-gl instance
-      marker: false // Do not use the default marker style
+      accessToken: environment.mapbox.accessToken ,
+      mapboxgl: mapboxgl,
+      marker: false
     });
 
-    // Add the geocoder to the map
-    map.addControl(geocoder);
+    this.map.addControl(geocoder);
 
-    map.on('mousemove', function (e) {
+    this.map.on('mousemove', function (e) {
       document.getElementById('info').innerHTML = JSON.stringify(
         e.lngLat.wrap()
       );
