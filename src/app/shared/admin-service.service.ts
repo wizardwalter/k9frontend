@@ -9,7 +9,7 @@ import { Admin } from '../_models/admin';
 })
 export class AdminServiceService {
   constructor(public http: HttpClient, public router: Router) {}
-  baseUrl = 'http://localhost:8080';
+  baseUrl = 'https://k9cs-backend.herokuapp.com';
   isAuthenticated = false;
   isLoading: boolean;
   private token: string;

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class DogServiceService {
 
   constructor(public http: HttpClient) { }
-  baseUrl = 'http://localhost:8080'
+  baseUrl = 'https://k9cs-backend.herokuapp.com'
 
   getDogs(){
     console.log('connected');

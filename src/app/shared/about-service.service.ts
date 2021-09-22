@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AboutServiceService {
 
   constructor(public http : HttpClient) { }
-  baseUrl = 'http://localhost:8080'
+  baseUrl = 'https://k9cs-backend.herokuapp.com'
 
   getAbout(){
     return this.http.get(this.baseUrl + '/about');
