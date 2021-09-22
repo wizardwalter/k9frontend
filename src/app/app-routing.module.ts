@@ -12,18 +12,23 @@ import { EditDogComponent } from './edit-dog/edit-dog.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 
+var domainName = "";
+if (location.hostname !== "localhost")
+    domainName = "k9-frontend.herokuapp.com/";
+
+
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
-  {path: 'blogs', component: BlogComponent},
-  {path: 'dogs', component: DogsComponent},
-  {path: 'dogs/:id', component: DogsByIdComponent},
-  {path: 'contact', component: AboutUsComponent},
-  {path: 'blogs/create', component: CreateBlogComponent},
-  {path: 'admin', component: LoginComponent},
-  {path: 'dog/create', component:CreateDogComponent},
-  {path: 'blogs/edit/:id', component: BlogByIdComponent},
-  {path: 'dog/edit/:id', component: EditDogComponent},
-  {path: 'donate', component: DonateComponent}
+  {path: domainName + '', component: HomepageComponent},
+  {path: domainName + 'blogs', component: BlogComponent},
+  {path: domainName + 'dogs', component: DogsComponent},
+  {path: domainName + 'dogs/:id', component: DogsByIdComponent},
+  {path: domainName + 'contact', component: AboutUsComponent},
+  {path: domainName + 'blogs/create', component: CreateBlogComponent},
+  {path: domainName + 'admin', component: LoginComponent},
+  {path: domainName +'dog/create', component:CreateDogComponent},
+  {path: domainName + 'blogs/edit/:id', component: BlogByIdComponent},
+  {path: domainName + 'dog/edit/:id', component: EditDogComponent},
+  {path: domainName + 'donate', component: DonateComponent}
 ];
 
 @NgModule({
