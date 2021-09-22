@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BlogComponent } from './blog/blog.component';
 import { BlogByIdComponent } from './blog-by-id/blog-by-id.component';
@@ -59,6 +60,7 @@ import { DonateComponent } from './donate/donate.component';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent],
 })
