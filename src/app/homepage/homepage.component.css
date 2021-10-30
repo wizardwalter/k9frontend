@@ -25,6 +25,8 @@ a {
 .card {
   width: 20vw;
   height: auto;
+  background: inherit;
+  border: none;
 }
 .card-img-top {
   height: 30vh;
@@ -83,167 +85,325 @@ i {
     height: 32px;
   }
 }
-
-#aboutus {
-  width: 100vw;
-  height: 80.25vh;
-  background: linear-gradient(180deg, #3b7ab5 0%, rgba(46, 85, 161, 0.4) 100%);
-  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
-    inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 51px;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
-}
-#aboutusheader {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 4vw;
-  line-height: 1.1em;
-  text-align: right;
-  color: #ffffff;
-  text-decoration: underline;
-  margin-top: 1.25vh;
-}
-
-#aboutusimg {
-  width: 90%;
-  height: 45vh;
-  border-radius: 5px;
-  margin-bottom: .5em;
-}
-
-#aboutusrow{
-  width: 100%;
-  height: 35vh;
-}
-
-#aboutustext {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: .75em;
-  line-height: 1.25em;
-  text-align: center;
-  color: #ffffff;
-}
-
-#ourteam {
-  width: 100vw;
-  height: 55vh;
-  background: linear-gradient(180deg, #992b2b 0%, #b53b3b 0%, #671818 100%);
-  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
-    inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 51px;
-  margin-bottom: 30px;
-}
-
-#ourteamheader {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 4vw;
-  line-height: 1.1em;
-  text-align: right;
-  color: #ffffff;
-  text-decoration: underline;
-  margin-top: 1.25vh;
-}
-
-.ourteampics {
-  margin-top: 3vh;
-  width: 95px;
-  height: 95px;
-  border-radius: 100em;
-  border: 2px solid black;
-}
-
-.ourteamnames {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 4vh;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 10px;
-}
-
-.ourteamjobs{
-  font-family: Montserrat;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 4vh;
-color: #ffffff;
-text-align: center;
-margin-top: 10px;
-}
-
-.card {
-  background: inherit;
-  border: none;
-}
-
+/* end of slideshow */
 .ourteamsubheader {
   color: #ffffff;
 }
 
-#blogs {
-  margin-top: 5vh;
-  width: 100vw;
-  height: max-content;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 245, 245, 0.75) 0%,
-    #ffffff 0%,
-    rgba(245, 245, 245, 0.75) 100%
-  );
-  box-shadow: 0px 4px 34px 1px rgba(0, 0, 0, 0.25),
-    inset 0px 4px 30px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 51px;
-}
-#view-all {
-  background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
-  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
-  border-radius: 100px;
-  width: 12vw;
-  height: 4vh;
-  line-height: 1vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#view-all-text {
-  width: 11vw;
-  font-family: Montserrat;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 1.75vw;
-  text-align: center;
-  color: #ffffff;
-}
 #viewallatag{
   text-align: center;
   height: fit-content;
   margin-bottom: 5px;
 }
-#latest-news {
-  width: 472px;
-  height: 60px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 4vw;
-  line-height: 88px;
-  text-align: right;
-  color: #222222;
-  text-decoration: underline;
-}
-
 #view-all-top {
   margin: 5px 0px 35px 0px;
+}
+
+
+/* mobile */
+@media screen and (max-width: 850px) {
+  #aboutus {
+    width: 100vw;
+    height: 79vh;
+    background: linear-gradient(180deg, #3b7ab5 0%, rgba(46, 85, 161, 0.4) 100%);
+    box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  #aboutusheader {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1em;
+    text-align: right;
+    color: #ffffff;
+    text-decoration: underline;
+    margin-top: 1.25vh;
+  }
+  #aboutusimg {
+    width: 90%;
+    height: 290px;
+    border-radius: 5px;
+    margin-bottom: .5em;
+  }
+  #aboutusrow{
+    width: 100%;
+    height: 40vh;
+  }
+  #aboutustext {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.5px;
+    line-height: 1.25em;
+    text-align: center;
+    color: #ffffff;
+  }
+  /* end of aboutUS */
+  #ourteam {
+    width: 100vw;
+    height: 48vh;
+    background: linear-gradient(180deg, #992b2b 0%, #b53b3b 0%, #671818 100%);
+    box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    margin-bottom: 30px;
+  }
+  #ourteamheader {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1em;
+    text-align: right;
+    color: #ffffff;
+    text-decoration: underline;
+    margin-top: 1.25vh;
+  }
+  .ourteampics {
+    margin-top: 3vh;
+    width: 140px;
+    height: 140px;
+    border-radius: 100em;
+    border: 2px solid black;
+  }
+  .ourteamnames {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 4vh;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  .ourteamjobs{
+    font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 4vh;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+  }
+  /* end ourTeam */
+  #blogs1 {
+    margin-top: 5vh;
+    width: 100vw;
+    height: 275px;
+    background: linear-gradient(
+      180deg,
+      rgba(245, 245, 245, 0.75) 0%,
+      #ffffff 0%,
+      rgba(245, 245, 245, 0.75) 100%
+    );
+    box-shadow: 0px 4px 34px 1px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 30px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    display: block;
+  }
+  #blogs2 {
+    display: none;
+  }
+  #view-all {
+    background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+    border-radius: 100px;
+    width: 20vw;
+    height: 3vh;
+    line-height: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #view-all-text {
+    width: 20vw;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    color: #ffffff;
+  }
+  #latest-news {
+    width: 472px;
+    height: 60px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 22px;
+    text-align: right;
+    color: #222222;
+    text-decoration: underline;
+  }
+  #latest-news-post-text{
+    text-align: center;
+    font-size: 20px;
+  }
 
 }
+/* laptop-desktop */
+@media screen and (min-width: 850px) {
+  #aboutus {
+    width: 100vw;
+    height: 82vh;
+    background: linear-gradient(180deg, #3b7ab5 0%, rgba(46, 85, 161, 0.4) 100%);
+    box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  #aboutusheader {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1em;
+    text-align: right;
+    color: #ffffff;
+    text-decoration: underline;
+    margin-top: 1.25vh;
+  }
+  #aboutusimg {
+    width: 90%;
+    height: 500px;
+    border-radius: 5px;
+    margin-bottom: .5em;
+  }
+  #aboutusrow{
+    width: 100%;
+    height: 35vh;
+  }
+  #aboutustext {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25em;
+    text-align: center;
+    color: #ffffff;
+  }
+  /* end of aboutUS */
+  #ourteam {
+    width: 100vw;
+    height: 47vh;
+    background: linear-gradient(180deg, #992b2b 0%, #b53b3b 0%, #671818 100%);
+    box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    margin-bottom: 30px;
+  }
+  #ourteamheader {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1em;
+    text-align: right;
+    color: #ffffff;
+    text-decoration: underline;
+    margin-top: 1.25vh;
+  }
+  .ourteampics {
+    margin-top: 3vh;
+    width: 210px;
+    height: 210px;
+    border-radius: 100em;
+    border: 2px solid black;
+  }
+  .ourteamnames {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 4vh;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  .ourteamjobs{
+    font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 4vh;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+  }
+  /* end ourTeam */
+  #blogs1 {
+    display: none;
+  }
+  #blogs2 {
+    margin-top: 5vh;
+    width: 100vw;
+    height: fit-content;
+    background: linear-gradient(
+      180deg,
+      rgba(245, 245, 245, 0.75) 0%,
+      #ffffff 0%,
+      rgba(245, 245, 245, 0.75) 100%
+    );
+    box-shadow: 0px 4px 34px 1px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 30px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 51px;
+    display: block;
+  }
+  #view-all {
+    background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+    border-radius: 100px;
+    width: 8vw;
+    height: 4vh;
+    line-height: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #view-all-text {
+    width: 11vw;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.1vw;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  #latest-news {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1em;
+    text-align: center;
+    color: #222222;
+    text-decoration: underline;
+    margin-top: 1.25vh;
+    margin-left: 50px;
+    width: 700px;
+  }
+  #latest-news-post-text{
+    text-align: center;
+    font-size: 24px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
 
