@@ -102,30 +102,31 @@
   <div class="container" id="blogs1">
     <div class="row d-flex" id="view-all-top">
       <div class="col-4">
-        <button id="view-all">
+        <button id="view-all" style="margin-top: 1vh;">
           <a id="viewallatag" routerLink="/blogs"
             ><span id="view-all-text">View All</span></a
           >
         </button>
       </div>
-      <div class="col-8">
+      <div class="col-8" style="margin-top: 10px;">
         <span id="latest-news">Latest News</span>
       </div>
     </div>
     <div>
       <!-- make full width of page -->
-      <div class="row d-flex justify-content-around">
-        <div *ngFor="let b of blogs">
+      <div id="news-row" class="row d-flex justify-content-around">
+        <div *ngFor="let b of blogs" style="width: 100px; text-overflow: hidden;">
           <cl-image public-id="{{ b.image }}">
             <cl-transformation
               gravity="face"
-              height="110"
-              width="110"
+              height="100"
+              width="100"
               crop="fill"
               border="4px_solid_rgb:282828"
+              loading='lazy'
             ></cl-transformation>
           </cl-image>
-          <h5 id="latest-news-post-text" class="card-title">{{ b.title }}</h5>
+          <h5 class="card-title latest-news-post-text" maxlength="25">{{ b.title }}</h5>
         </div>
       </div>
     </div>
@@ -145,8 +146,8 @@
     </div>
     <div>
       <!-- make full width of page -->
-      <div class="row d-flex justify-content-around">
-        <div *ngFor="let b of blogs">
+      <div  class="row d-flex justify-content-around">
+        <div id="news-card" *ngFor="let b of blogs" style="width: 200px; text-overflow: hidden;">
           <cl-image public-id="{{ b.image }}">
             <cl-transformation
               gravity="face"
@@ -154,9 +155,10 @@
               width="200"
               crop="fill"
               border="4px_solid_rgb:282828"
+              loading='lazy'
             ></cl-transformation>
           </cl-image>
-          <h5 id="latest-news-post-text" class="card-title">{{ b.title }}</h5>
+          <h5 class="card-title latest-news-post-text">{{ b.title }}</h5>
         </div>
       </div>
     </div>
