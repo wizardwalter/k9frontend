@@ -28,7 +28,7 @@
 
   <div id="container-top" class="container-fluid">
       <div class="row d-flex justify-content-center">
-        <div *ngFor="let d of dogs" class="card col-sm-2">
+        <div *ngFor="let d of dogs" class="card col-sm-2" style="margin-left: 50px;">
           <div class=" row d-flex justify-content-center">
             <cl-image class="card-top" public-id="{{ d.image }}">
               <cl-transformation gravity="face" height="250" width="275" crop="fill" radius="25" border="2px_solid_rgb:282828">

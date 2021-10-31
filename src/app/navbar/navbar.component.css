@@ -288,6 +288,7 @@
     position: absolute;
     width: 107px;
     height: fit-content;
+    margin-top: 10px;
   }
 
   #news_button {
