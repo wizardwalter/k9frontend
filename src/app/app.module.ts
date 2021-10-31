@@ -26,6 +26,8 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
 import { EditDogComponent } from './edit-dog/edit-dog.component';
 import { FooterComponent } from './footer/footer.component';
 import { DonateComponent } from './donate/donate.component';
+import { OneblogComponent } from './oneblog/oneblog.component';
+import { QuillModule } from 'ngx-quill';
 
 
 
@@ -45,12 +47,14 @@ import { DonateComponent } from './donate/donate.component';
     EditDogComponent,
     FooterComponent,
     DonateComponent,
+    OneblogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    QuillModule.forRoot(),
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
     HttpClientModule,

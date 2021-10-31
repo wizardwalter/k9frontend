@@ -11,6 +11,7 @@ import { DonateComponent } from './donate/donate.component';
 import { EditDogComponent } from './edit-dog/edit-dog.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
+import { OneblogComponent } from './oneblog/oneblog.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'dog/create', component:CreateDogComponent},
   {path: 'blogs/edit/:id', component: BlogByIdComponent},
   {path: 'dog/edit/:id', component: EditDogComponent},
-  {path: 'donate', component: DonateComponent}
+  {path: 'donate', component: DonateComponent},
+  {path: 'blog/:id', component:OneblogComponent}
 ];
 
 @NgModule({

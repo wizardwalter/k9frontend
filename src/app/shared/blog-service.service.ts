@@ -9,22 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class BlogServiceService {
   constructor(public http: HttpClient, public router: Router) {}
-  baseUrl = 'https://k9cs-backend.herokuapp.com';
+  // baseUrl = 'https://k9cs-backend.herokuapp.com';
+  baseUrl = 'http://localhost:8080'
 
   getBlogs() {
     console.log('connected');
     return this.http.get(this.baseUrl + '/blogs');
   }
 
-  getBlog(id) {
-    console.log(id);
-    return this.http.get<{
-      _id: string;
-      title: string;
-      text: string;
-      author: string;
-    }>(this.baseUrl + '/blogs/' + id);
-  }
+  getBlog(id){
+    return this.http.get(this.baseUrl + "/blogs/"+ id)
+  };
 
   // addBlog(title: string, text: string, author: string, image:string, formData){
   //   const blogData = {

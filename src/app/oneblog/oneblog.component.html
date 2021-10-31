@@ -1,0 +1,18 @@
+<div id="whole-container" class="container">
+  <div class="row justify-content-center">
+    <div class="card">
+      <div class="row justify-content-center">
+        <cl-image public-id="{{blog.image}}">
+          <cl-transformation gravity="face" height="350" width="330" crop="fill"></cl-transformation></cl-image>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <h5 class="card-title">{{blog.name}}</h5>
+        </div>
+          <div class="row justify-content-center">
+            <p class="card-text">{{blog.about}}</p>
+          </div>
+      </div>
+      <button *ngIf="isLogin" class="btn btn-lg btn-warning" [routerLink]="['/blogs/edit/', b._id]"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button *ngIf="isLogin" class="btn btn-lg btn-danger" (click)="deletePost(b._id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    </div>

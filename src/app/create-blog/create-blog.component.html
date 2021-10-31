@@ -1,18 +1,24 @@
 <div class="container">
   <form class="form" #form='ngForm' (submit)="onSubmit(form)">
     <div class="title">New Blog</div>
+    <input id="firstname" class="input" type="text" placeholder=" " name="title" ngModel form.title="ngModel"/>
+    <quill-editor name="text" ngModel form.text="ngModel"  placeholder="">
+    </quill-editor>
+    <input id="email" class="input" type="text" placeholder=" " name="author" ngModel form.author="ngModel"/>
+    <button type="submit" class="submit">submit</button>
+  </form>
+    </div>
 
-
-    <input type="file" class="inputfile" name="photo" ngModel
-          (input)="onChange(f.files[0])" #f #test>
-    <div class="input-container ic1" >
+    <!-- <input type="file" class="inputfile" name="photo" ngModel
+          (input)="onChange(f.files[0])" #f #test> -->
+    <!-- <div class="input-container ic1" >
       <input id="firstname" class="input" type="text" placeholder=" " name="title" ngModel form.title="ngModel"/>
       <div class="cut cut-short"></div>
       <label for="firstname" class="placeholder">Title</label>
     </div>
     <div class="input-container ic2">
-      <input id="lastname" class="input" type="text" placeholder=" " name="text" ngModel form.text="ngModel"/>
-      <div class="cut cut-short"></div>
+      <quill-editor name="text" ngModel form.text="ngModel"  placeholder="">
+      </quill-editor>
       <label for="lastname" class="placeholder">Text</label>
     </div>
     <div class="input-container ic2">
@@ -22,5 +28,9 @@
     </div>
     <button type="submit" class="submit">submit</button>
    </form>
-</div>
+</div> -->
 
+<!-- <input id="lastname" class="input" type="text" placeholder=" " name="text" ngModel form.text="ngModel"/>
+      <div class="cut cut-short"></div>
+    [styles]="quillStyle"
+    -->

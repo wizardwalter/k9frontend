@@ -47,34 +47,17 @@ export class CreateBlogComponent implements OnInit {
         text: formObj.value.text,
         author: formObj.value.author
       };
-    let formData = new FormData();
-    let userObj = formObj.value;
+      console.log("Data: ",Data)
+    // let formData = new FormData();
+    // let userObj = formObj.value;
 
-    formData.append("photo", this.file);
-    formData.append("title", Data.title);
-    formData.append("text", Data.text);
-    formData.append("author", Data.author);
-    formData.append("userObj", JSON.stringify(userObj));
-    console.log(formData)
-    console.log(this.file)
-    await this.blogService.addBlog(formData).subscribe();
+    // // formData.append("photo", this.file);
+    // formData.append("title", Data.title);
+    // formData.append("text", Data.text);
+    // formData.append("author", Data.author);
+    // formData.append("userObj", JSON.stringify(userObj));
+    // console.log('formdata: ',formData)
+    await this.blogService.addBlog(Data).subscribe();
     await this.router.navigateByUrl("/blogs");
   }
-  //   onSubmit(form: NgForm){
-  //     if (form.invalid) {
-  //       return
-  //     } else {
-  //       // this.file = form.value.image;
-  //       // const reader = new FileReader();
-  //       // reader.readAsDataURL(this.file);
-  //       // console.log(reader)
-  //       let formData = new FormData();
-
-  //       let userObj = form.value.image;
-  //       formData.append("photo", userObj)
-  //       this.blogService.addBlog(form.value.title, form.value.text, form.value.author, form.value.image, formData)
-  //     }
-  //     form.reset();
-  //   }
-
-  }
+}

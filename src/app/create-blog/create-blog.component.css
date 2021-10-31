@@ -1,4 +1,4 @@
-.container{
+/* .container{
   margin-top: 4vh;
   display: flex;
   align-items: center;
@@ -12,9 +12,9 @@
   height: 500px;
   padding: 20px;
   width: 320px;
-}
+} */
 
-.title {
+/* .title {
   color: #eee;
   font-family: sans-serif;
   font-size: 36px;
@@ -120,4 +120,4 @@
 
 .submit:active {
   background-color: #06b;
-}
+} */
