@@ -1,5 +1,5 @@
 /* desktop */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1200px) {
   #container-top {
     margin-top: 5vh;
   }
@@ -89,7 +89,7 @@
 
 }
 /* mobile */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   #container-top {
     margin-top: 5vh;
   }
