@@ -2,7 +2,7 @@
 @media screen and (min-width: 500px) {
   #aboutus {
     width: 100vw;
-    height: 80.5vh;
+    height: 82vh;
     background: linear-gradient(180deg, #3b7ab5 0%, rgba(46, 85, 161, 0.4) 100%);
     box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25),
       inset 0px 4px 6px 8px rgba(0, 0, 0, 0.25);
@@ -65,7 +65,7 @@
   margin-left: 30px;
   margin-bottom: 10px;
   }
-  .buttons{
+  .paypal-button{
   width: 16.5vw;
   height: 12vh;
   background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
@@ -83,7 +83,7 @@
   }
   #amazon{
     width: 100vw;
-  height: fit-content;
+  height: 26vh;
   background: linear-gradient(157.12deg, #992B2B 14.84%, #671818 86.24%);
   border: 6px solid #501919;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 14px 9px rgba(0, 0, 0, 0.25);
@@ -101,6 +101,14 @@
   text-align: center;
   color: #FFFFFF;
   width: 50vw;
+  }
+  .amazon-button{
+    margin-top: 15px;
+    width: 16.5vw;
+    height: 12vh;
+    background: linear-gradient(180deg, #373737 0%, #181818 97.18%);
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.32);
+    border-radius: 100px;
   }
   #amazon-span{
     margin-left: 5vw;
