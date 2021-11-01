@@ -30,11 +30,7 @@ export class HomepageComponent implements OnInit {
     this.blogService.getBlogs().subscribe(
     async res=> {
       this.blogs1 = await res['blogs'];
-      if(await this.blogs1.length > 3){
         this.blogs = await this.blogs1.slice(this.blogs1.length - 3, this.blogs1.length);
-      }else{
-        this.blogs1.push(this.blogs)
-      }
       this.isLoading = await false;
     })
   }
