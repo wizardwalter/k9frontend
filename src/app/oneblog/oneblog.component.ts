@@ -14,13 +14,21 @@ export class OneblogComponent implements OnInit {
   id;
   blog;
   isLogin: boolean = false;
+  isLoading: boolean = true
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params =>{
       this.id = params.get('id');
-      this.blogService.getBlog(this.id).subscribe(res =>{
+      this.blogService.getBlog(this.id).subscribe(async res =>{
         this.blog = res['blog'];
         this.isLogin =this.adminService.getIsAuth()
+        this.isLoading = await false;
       })
   }
     )}
+
+    deletePost(id) {
+      this.blogService.deleteBlog(id).subscribe((res) => {
+        this.router.navigateByUrl('/blogs');
+      });
+    }
 }

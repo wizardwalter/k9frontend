@@ -18,6 +18,7 @@ export class DogsByIdComponent implements OnInit {
   lng: number;
   map: mapboxgl.Map;
   isLogin: boolean = false;
+  isLoading: boolean = true;
   style = 'mapbox://styles/mapbox/streets-v11';
 
   constructor(public activatedRoute: ActivatedRoute, public dogService: DogServiceService, public adminService: AdminServiceService, public router: Router) { }
@@ -25,10 +26,11 @@ export class DogsByIdComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params =>{
       this.id = params.get('id');
-      this.dogService.getDog(this.id).subscribe(res => {
+      this.dogService.getDog(this.id).subscribe( async res => {
         this.dog = res['dog'];
         this.lng = this.dog.coordinates.longtitude;
         this.lat = this.dog.coordinates.latitude;
+        this.isLoading = await false;
         this.map = new mapboxgl.Map({
           accessToken: environment.mapbox.accessToken,
           container: 'map',
@@ -43,9 +45,11 @@ export class DogsByIdComponent implements OnInit {
         .setLngLat([this.dog.coordinates.longtitude, this.dog.coordinates.latitude])
         .addTo(this.map); // add the marker to the map
           console.log(this.dog);
+
       })
     })
     this.isLogin = this.adminService.getIsAuth();
+
   }
 
   deleteDog(id){

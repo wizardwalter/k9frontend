@@ -1,5 +1,13 @@
-
-<div id="whole-container" class="container">
+<div *ngIf="isLoading" class="container">
+  <div class="row d-flex justify-content-center">
+    <div  class="lds-facebook col-12">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!isLoading" id="whole-container" class="container">
   <div class="row justify-content-center">
     <div class="card">
       <div class="row justify-content-center">

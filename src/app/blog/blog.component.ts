@@ -13,6 +13,7 @@ export class BlogComponent implements OnInit {
   date;
   imageName;
   isLogin: boolean = false;
+  isLoading: boolean = true
 
   constructor(
     public blogService: BlogServiceService,
@@ -22,18 +23,15 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLogin = this.adminService.getIsAuth();
-    this.blogService.getBlogs().subscribe((res) => {
+    this.blogService.getBlogs().subscribe( res => {
       this.blogs = res['blogs'];
       this.imageName = this.blogs.image;
       console.log(res);
       this.date = this.blogs.date;
       console.log(this.blogs);
+      this.isLoading =  false;
     });
   }
 
-  deletePost(id) {
-    this.blogService.deleteBlog(id).subscribe((res) => {
-      console.log(res);
-    });
-  }
+
 }

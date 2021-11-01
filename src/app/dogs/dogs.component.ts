@@ -16,13 +16,15 @@ export class DogsComponent implements OnInit {
   longtitudes = [];
   map: mapboxgl.Map;
   isLogin : boolean = false;
+  isLoading: boolean = true;
   style = 'mapbox://styles/mapbox/streets-v11';
   constructor(public dogService: DogServiceService, public adminService: AdminServiceService) { }
 
   ngOnInit() {
     this.isLogin = this.adminService.getIsAuth();
-    this.dogService.getDogs().subscribe(res=>{
+    this.dogService.getDogs().subscribe(async res=>{
       this.dogs = res['dogs'];
+      this.isLoading = await false;
       this.map = new mapboxgl.Map({
         accessToken: environment.mapbox.accessToken,
         container: 'map',
@@ -30,12 +32,14 @@ export class DogsComponent implements OnInit {
         zoom: 1,
         center: [-89,37.30027528134433],
     });
+
      this.map.addControl(new mapboxgl.NavigationControl());
   this.dogs.forEach(oneDog => {
      new mapboxgl.Marker()
     .setLngLat([oneDog.coordinates.longtitude, oneDog.coordinates.latitude])
     .addTo(this.map)
       })
+
     })
   }
 }
