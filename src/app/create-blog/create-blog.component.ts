@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { AdminServiceService } from '../shared/admin-service.service';
 import { BlogServiceService } from '../shared/blog-service.service';
 import { Blog } from '../_models/blog';
 
@@ -18,10 +19,13 @@ export class CreateBlogComponent implements OnInit {
 
 
 
-  constructor(public route: ActivatedRoute, public blogService: BlogServiceService, public router: Router) { }
+
+  constructor(public route: ActivatedRoute, public blogService: BlogServiceService, public router: Router, public adminService: AdminServiceService) { }
 
   ngOnInit(): void {
-
+    if(this.adminService.getIsAuth() == false){
+      this.router.navigateByUrl('/')
+    }
   }
   file: File;
   fileName: string = "No Image Selected";
@@ -41,23 +45,24 @@ export class CreateBlogComponent implements OnInit {
 
     }
   };
-    async onSubmit(formObj: NgForm) {
-      let Data = {
-        title: formObj.value.title,
-        text: formObj.value.text,
-        author: formObj.value.author
-      };
-      console.log("Data: ",Data)
-    // let formData = new FormData();
-    // let userObj = formObj.value;
+  async onSubmit(formObj: NgForm) {
+    let Data = {
+      title: formObj.value.title,
+      text: formObj.value.text,
+      author: formObj.value.author
+    };
+  let formData = new FormData();
+  let userObj = formObj.value;
 
-    // // formData.append("photo", this.file);
-    // formData.append("title", Data.title);
-    // formData.append("text", Data.text);
-    // formData.append("author", Data.author);
-    // formData.append("userObj", JSON.stringify(userObj));
-    // console.log('formdata: ',formData)
-    await this.blogService.addBlog(Data).subscribe();
-    await this.router.navigateByUrl("/blogs");
+  formData.append("photo", this.file);
+  formData.append("title", Data.title);
+  formData.append("text", Data.text);
+  formData.append("author", Data.author);
+  formData.append("userObj", JSON.stringify(userObj));
+  console.log(formData)
+  console.log(this.file)
+  await this.blogService.addBlog(formData).subscribe();
+  await this.router.navigateByUrl("/blogs");
   }
+  quillStyle = {'height': '500px'}
 }

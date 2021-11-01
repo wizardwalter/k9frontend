@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'blogs/edit/:id', component: BlogByIdComponent},
   {path: 'dog/edit/:id', component: EditDogComponent},
   {path: 'donate', component: DonateComponent},
-  {path: 'blog/:id', component:OneblogComponent}
+  {path: 'blogs/:id', component:OneblogComponent}
 ];
 
 @NgModule({

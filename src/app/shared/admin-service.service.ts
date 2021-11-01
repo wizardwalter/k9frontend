@@ -67,7 +67,7 @@ export class AdminServiceService {
   setAdminTimer(duration:number){
       this.tokenTimer = window.setTimeout(()=>{
         this.logout()
-      }, duration * 1000);
+      }, duration * 10000);
     }
 
    saveAdminData(token: string, expirationDate : Date){

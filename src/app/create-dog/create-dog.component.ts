@@ -6,6 +6,8 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { environment } from '../_enviroment/env.js';
 import { DogServiceService } from '../shared/dog-service.service';
+import { AdminServiceService } from '../shared/admin-service.service.js';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-create-dog',
@@ -13,7 +15,7 @@ import { DogServiceService } from '../shared/dog-service.service';
   styleUrls: ['./create-dog.component.css'],
 })
 export class CreateDogComponent implements OnInit {
-  constructor(public dogService: DogServiceService, public router: Router) {}
+  constructor(public dogService: DogServiceService, public router: Router, public adminService: AdminServiceService) {}
 
 isLoading : boolean = true;
 map: mapboxgl.Map;
@@ -40,8 +42,7 @@ map: mapboxgl.Map;
       );
     });
 
-  }
-
+   }
   file: File;
   fileName: string = 'No Image Selected';
   imageUrl: string | ArrayBuffer =
@@ -81,4 +82,6 @@ map: mapboxgl.Map;
     await this.dogService.addDog(formData).subscribe();
     await this.router.navigateByUrl('/dogs');
   }
+
+
 }

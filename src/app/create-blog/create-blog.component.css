@@ -1,20 +1,21 @@
-/* .container{
-  margin-top: 4vh;
+ .container{
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 1000px;
 }
 
-.form {
+/* .form {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
   height: 500px;
   padding: 20px;
   width: 320px;
-} */
+}
 
-/* .title {
+ .title {
   color: #eee;
   font-family: sans-serif;
   font-size: 36px;

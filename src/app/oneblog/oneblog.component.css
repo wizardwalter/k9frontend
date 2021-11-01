@@ -1,0 +1,28 @@
+#whole-container{
+  align-content: center;
+}
+.card{
+  margin: 20px;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+
+}
+.card-img-top{
+height: 55vh;
+width: 40rem;
+}
+
+#map{
+  width: 40rem;
+  height: 40vh;
+  margin: 25px;
+}
+.card-body{
+  height: 300px;
+}
+
+.card-title{
+  text-align: center;
+  font-size: 24px;
+}
